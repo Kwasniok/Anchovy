@@ -1,0 +1,20 @@
+### Xcode
+
+# User settings
+xcuserdata/
+
+# compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
+
+
+## Gcc Patch
+/*.gcno
+
+## Obj-C/Swift specific
+*.hmap
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
