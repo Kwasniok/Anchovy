@@ -615,7 +615,7 @@ CA
                     </connections>
                 </arrayController>
                 <dateFormatter dateStyle="short" id="Iwg-LR-8mB"/>
-                <numberFormatter formatterBehavior="default10_4" numberStyle="currencyAccounting" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" minimumFractionDigits="2" maximumFractionDigits="2" id="F37-RD-Dum" userLabel="Amount Formatter"/>
+                <numberFormatter formatterBehavior="default10_4" numberStyle="currency" lenient="YES" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" minimumFractionDigits="2" maximumFractionDigits="2" id="F37-RD-Dum" userLabel="Amount Formatter"/>
             </objects>
             <point key="canvasLocation" x="75" y="869"/>
         </scene>
