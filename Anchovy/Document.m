@@ -74,7 +74,7 @@
         }
         [recordStr appendString: fieldStr];
         [recordStr appendString: _fieldSeparator];
-        [recordStr appendString:_recordSeparator];
+        [recordStr appendString: _recordSeparator];
         // Append record.
         [dataStr appendString:recordStr];
     }
