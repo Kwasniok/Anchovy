@@ -619,6 +619,30 @@ CA
             </objects>
             <point key="canvasLocation" x="75" y="869"/>
         </scene>
+        <!--Overview View Controller-->
+        <scene sceneID="XFw-Kn-euc">
+            <objects>
+                <viewController id="Jop-Dh-IBt" customClass="OverviewViewController" sceneMemberID="viewController">
+                    <view key="view" id="VP1-h2-Kmu">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2JF-ec-QqY">
+                                <rect key="frame" x="210" y="443" width="61" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Overview" id="jIw-Jw-geo">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="bFS-LE-CJk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="591" y="869"/>
+        </scene>
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>

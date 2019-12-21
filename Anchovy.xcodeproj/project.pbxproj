@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B445CE4C23AEDF3D00D70AB3 /* OverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B445CE4B23AEDF3D00D70AB3 /* OverviewViewController.m */; };
 		B4519F2C23AD5683008A4440 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4519F2B23AD5683008A4440 /* AppDelegate.m */; };
 		B4519F2F23AD5683008A4440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4519F2E23AD5683008A4440 /* main.m */; };
 		B4519F3223AD5683008A4440 /* RecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4519F3123AD5683008A4440 /* RecordsViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B445CE4A23AEDF3D00D70AB3 /* OverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewViewController.h; sourceTree = "<group>"; };
+		B445CE4B23AEDF3D00D70AB3 /* OverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewViewController.m; sourceTree = "<group>"; };
 		B4519F2723AD5683008A4440 /* Anchovy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anchovy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4519F2A23AD5683008A4440 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4519F2B23AD5683008A4440 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 				B4519F2B23AD5683008A4440 /* AppDelegate.m */,
 				B4519F3023AD5683008A4440 /* RecordsViewController.h */,
 				B4519F3123AD5683008A4440 /* RecordsViewController.m */,
+				B445CE4A23AEDF3D00D70AB3 /* OverviewViewController.h */,
+				B445CE4B23AEDF3D00D70AB3 /* OverviewViewController.m */,
 				B4519F3323AD5683008A4440 /* Document.h */,
 				B4519F3423AD5683008A4440 /* Document.m */,
 				B49AFA7223AE903B00DE84B9 /* Content.h */,
@@ -162,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4519F3523AD5683008A4440 /* Document.m in Sources */,
+				B445CE4C23AEDF3D00D70AB3 /* OverviewViewController.m in Sources */,
 				B4519F3223AD5683008A4440 /* RecordsViewController.m in Sources */,
 				B4519F2F23AD5683008A4440 /* main.m in Sources */,
 				B49AFA7423AE903B00DE84B9 /* Content.m in Sources */,
