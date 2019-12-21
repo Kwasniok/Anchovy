@@ -155,6 +155,11 @@
                                                 <action selector="pasteAsPlainText:" target="Ady-hI-5gd" id="cEh-KX-wJQ"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Add" keyEquivalent="+" id="93r-aK-4cO">
+                                            <connections>
+                                                <action selector="add:" target="Ady-hI-5gd" id="Yx6-UB-xrQ"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Delete" id="pa3-QI-u2k">
                                             <string key="keyEquivalent" base64-UTF8="YES">
 CA

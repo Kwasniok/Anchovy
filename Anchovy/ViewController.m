@@ -29,6 +29,11 @@
     return YES;
 }
 
+-(void)add:(id)sender
+{
+    return [self addRecord:sender];
+}
+
 -(void)delete:(id)sender
 {
     return [self removeRecord:sender];
