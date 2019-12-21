@@ -14,5 +14,8 @@
 @property (strong) IBOutlet NSDateFormatter *dateFormatter;
 @property (strong) IBOutlet NSNumberFormatter *amountFormatter;
 
+- (IBAction)addRecord:(id)sender;
+- (IBAction)removeRecord:(id)sender;
+
 @end
 

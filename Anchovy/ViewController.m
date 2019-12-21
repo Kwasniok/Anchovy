@@ -24,4 +24,16 @@
 }
 
 
+- (IBAction)addRecord:(id)sender
+{
+    Record* record = [[Record alloc] init];
+    record.date = [[NSDate alloc] initWithTimeIntervalSinceNow:0.0];
+    record.amount = [[NSNumber alloc] initWithFloat:0.0];
+    [_recordController addObject:record];
+}
+
+- (IBAction)removeRecord:(id)sender
+{
+    [_recordController removeObjects: _recordController.selectedObjects];
+}
 @end
