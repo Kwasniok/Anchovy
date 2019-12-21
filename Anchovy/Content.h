@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Record.h"
 
 @interface Content : NSObject
+
+@property NSMutableArray<Record*>* records;
 
 @end
