@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import "Content.h"
 
+// Note: IO formatters are intentionally differnt from the UI formatters!
+
 @interface Document : NSDocument
 
 @property Content* content;
