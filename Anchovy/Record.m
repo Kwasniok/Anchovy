@@ -10,4 +10,13 @@
 
 @implementation Record
 
+-(instancetype)initWithDate:(NSDate *)date amount:(NSNumber *)amount {
+    self = [super init];
+    if (self) {
+        _date = date;
+        _amount = amount;
+    }
+    return self;
+}
+
 @end

@@ -10,4 +10,9 @@
 
 @interface Record : NSObject
 
+@property NSDate* date;
+@property NSNumber* amount;
+
+-(instancetype)initWithDate:(NSDate*) date amount:(NSNumber*) amount;
+
 @end
