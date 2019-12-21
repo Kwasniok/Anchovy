@@ -13,4 +13,6 @@
 
 @property NSMutableArray<Record*>* records;
 
+-(instancetype)init;
+
 @end

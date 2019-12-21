@@ -10,4 +10,14 @@
 
 @implementation Content
 
+-(instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        _records = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 @end
