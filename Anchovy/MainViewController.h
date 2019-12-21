@@ -1,5 +1,5 @@
 //
-//  OverviewViewController.h
+//  MainViewController.h
 //  Anchovy
 //
 //  Created by Jens Kwasniok on 22.12.19.
@@ -8,8 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface OverviewViewController : NSViewController
-
-@property (weak) IBOutlet NSTextField *outputTotalNet;
+@interface MainViewController : NSTabViewController
 
 @end

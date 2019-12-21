@@ -436,17 +436,40 @@ CA
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
-                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="window.shadowedContentViewController" id="nsd-lR-9xd"/>
+                        <segue destination="pqY-Su-iH9" kind="relationship" relationship="window.shadowedContentViewController" id="ksL-YJ-VqM"/>
                     </connections>
                 </windowController>
                 <customObject id="6f7-a7-6o1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Records View Controller-->
+        <!--Main View Controller-->
+        <scene sceneID="sfB-by-4dQ">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="0" id="pqY-Su-iH9" customClass="MainViewController" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="3wP-B3-ymZ"/>
+                        <tabViewItem id="VAu-HF-SeO"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="JZq-xe-P23">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="tabItems" id="4Sx-b4-eXc"/>
+                        <segue destination="Jop-Dh-IBt" kind="relationship" relationship="tabItems" id="LhL-ur-u5L"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="vBS-1I-DTE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="750"/>
+        </scene>
+        <!--Records-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="5gI-5U-AMq" customClass="RecordsViewController" sceneMemberID="viewController">
+                <viewController title="Records" id="5gI-5U-AMq" customClass="RecordsViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="ERx-hH-rdd">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -617,12 +640,12 @@ CA
                 <dateFormatter dateStyle="short" id="Iwg-LR-8mB"/>
                 <numberFormatter formatterBehavior="default10_4" numberStyle="currency" lenient="YES" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" minimumFractionDigits="2" maximumFractionDigits="2" id="F37-RD-Dum" userLabel="Amount Formatter"/>
             </objects>
-            <point key="canvasLocation" x="75" y="869"/>
+            <point key="canvasLocation" x="-179" y="1416"/>
         </scene>
-        <!--Overview View Controller-->
+        <!--Overview-->
         <scene sceneID="XFw-Kn-euc">
             <objects>
-                <viewController id="Jop-Dh-IBt" customClass="OverviewViewController" sceneMemberID="viewController">
+                <viewController title="Overview" id="Jop-Dh-IBt" customClass="OverviewViewController" sceneMemberID="viewController">
                     <view key="view" id="VP1-h2-Kmu">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -636,12 +659,24 @@ CA
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qN-rm-k9x">
+                                <rect key="frame" x="18" y="418" width="444" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Total Net" id="m7n-Sh-PBX">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="outputTotalNet" destination="1qN-rm-k9x" id="QHF-sJ-Ro8"/>
+                    </connections>
                 </viewController>
                 <customObject id="bFS-LE-CJk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="591" y="869"/>
+            <point key="canvasLocation" x="329" y="1416"/>
         </scene>
     </scenes>
     <resources>
