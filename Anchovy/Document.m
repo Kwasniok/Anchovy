@@ -23,7 +23,9 @@
         _recordSeparator = @"\n";
         _fieldSeparator = @";";
         _dateFormatter = [[NSDateFormatter alloc] init];
+        [_dateFormatter setDateFormat:@"YYYY.MM.dd.HH.mm.ss"];
         _amountFormatter = [[NSNumberFormatter alloc] init];
+        _amountFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
     }
     return self;
 }
