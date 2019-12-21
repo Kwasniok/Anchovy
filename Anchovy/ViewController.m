@@ -24,6 +24,16 @@
 }
 
 
+-(BOOL)acceptsFirstResponder
+{
+    return YES;
+}
+
+-(void)delete:(id)sender
+{
+    return [self removeRecord:sender];
+}
+
 - (IBAction)addRecord:(id)sender
 {
     Record* record = [[Record alloc] init];
