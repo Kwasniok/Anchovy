@@ -308,6 +308,7 @@
 				B4519F4023AD5683008A4440 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
