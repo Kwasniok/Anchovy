@@ -7,9 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Content.h"
 
 @interface Document : NSDocument
 
+@property Content* content;
+@property NSString* recordSeparator;
+@property NSString* fieldSeparator;
+@property NSDateFormatter* dateFormatter;
+@property NSNumberFormatter* amountFormatter;
 
 @end
 
