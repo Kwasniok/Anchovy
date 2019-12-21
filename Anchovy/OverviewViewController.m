@@ -14,15 +14,41 @@
 
 @implementation OverviewViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do view setup here.
 }
 
-- (void)setRepresentedObject:(id)representedObject {
+- (void)setRepresentedObject:(id)representedObject
+{
     [super setRepresentedObject:representedObject];
-    
-    // Update the view, if already loaded.
 }
 
+- (IBAction)update:(id)sender
+{
+    Content* content = self.representedObject;
+    float total = 0.0;
+    float positiveTotal = 0.0;
+    float negativeTotal = 0.0;
+    for (Record* record in content.records)
+    {
+        NSNumber* amount = record.amount;
+        if (amount)
+        {
+            float amt = amount.floatValue;
+            if (amt > 0.0)
+            {
+                positiveTotal += amt;
+            }
+            if (amt < 0.0)
+            {
+                negativeTotal += amt;
+            }
+            total += amt;
+        }
+    }
+    _outputPositiveTotal.floatValue = positiveTotal;
+    _outputNegativeTotal.floatValue = negativeTotal;
+    _outputTotal.floatValue = total;
+}
 @end
