@@ -14,6 +14,7 @@
 		B4519F3723AD5683008A4440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4519F3623AD5683008A4440 /* Assets.xcassets */; };
 		B4519F3A23AD5683008A4440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4519F3823AD5683008A4440 /* Main.storyboard */; };
 		B49AFA7423AE903B00DE84B9 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = B49AFA7323AE903B00DE84B9 /* Content.m */; };
+		B49AFA7723AE92C100DE84B9 /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = B49AFA7623AE92C100DE84B9 /* Record.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		B4519F3B23AD5683008A4440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B49AFA7223AE903B00DE84B9 /* Content.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
 		B49AFA7323AE903B00DE84B9 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
+		B49AFA7523AE92C100DE84B9 /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
+		B49AFA7623AE92C100DE84B9 /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				B4519F3423AD5683008A4440 /* Document.m */,
 				B49AFA7223AE903B00DE84B9 /* Content.h */,
 				B49AFA7323AE903B00DE84B9 /* Content.m */,
+				B49AFA7523AE92C100DE84B9 /* Record.h */,
+				B49AFA7623AE92C100DE84B9 /* Record.m */,
 				B4519F3623AD5683008A4440 /* Assets.xcassets */,
 				B4519F3823AD5683008A4440 /* Main.storyboard */,
 				B4519F3B23AD5683008A4440 /* Info.plist */,
@@ -160,6 +165,7 @@
 				B4519F3223AD5683008A4440 /* ViewController.m in Sources */,
 				B4519F2F23AD5683008A4440 /* main.m in Sources */,
 				B49AFA7423AE903B00DE84B9 /* Content.m in Sources */,
+				B49AFA7723AE92C100DE84B9 /* Record.m in Sources */,
 				B4519F2C23AD5683008A4440 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
