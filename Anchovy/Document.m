@@ -39,7 +39,9 @@
 - (void)makeWindowControllers
 {
     // Override to return the Storyboard file name of the document.
-    [self addWindowController:[[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"Document Window Controller"]];
+    NSWindowController* docWinController = [[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"Document Window Controller"];
+    docWinController.contentViewController.representedObject = _content;
+    [self addWindowController:docWinController];
 }
 
 

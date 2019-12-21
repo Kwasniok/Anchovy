@@ -10,6 +10,9 @@
 
 @interface ViewController : NSViewController
 
+@property (strong) IBOutlet NSArrayController *recordController;
+@property (strong) IBOutlet NSDateFormatter *dateFormatter;
+@property (strong) IBOutlet NSNumberFormatter *amountFormatter;
 
 @end
 
