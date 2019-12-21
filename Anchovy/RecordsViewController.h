@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RecordsViewController
 //  Anchovy
 //
 //  Created by Jens Kwasniok on 20.12.19.
@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "Content.h"
 
-@interface ViewController : NSViewController
+@interface RecordsViewController : NSViewController
 
 @property (strong) IBOutlet NSArrayController *recordController;
 @property (strong) IBOutlet NSDateFormatter *dateFormatter;

@@ -1,14 +1,14 @@
 //
-//  ViewController.m
+//  RecordsViewController
 //  Anchovy
 //
 //  Created by Jens Kwasniok on 20.12.19.
 //  Copyright © 2019 Jens Kwasniok. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RecordsViewController.h"
 
-@implementation ViewController
+@implementation RecordsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
