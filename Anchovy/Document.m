@@ -25,8 +25,10 @@
         _tagSeparator = @","; // Must match separator of corresponding NSTokenField in UI!
         _dateFormatter = [[NSDateFormatter alloc] init];
         [_dateFormatter setDateFormat:@"YYYY.MM.dd.HH.mm.ss"];
+        [_dateFormatter setLenient:YES];
         _amountFormatter = [[NSNumberFormatter alloc] init];
         _amountFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
+        [_amountFormatter setLenient:YES];
     }
     return self;
 }
