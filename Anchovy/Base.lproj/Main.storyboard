@@ -467,10 +467,10 @@ CA
             </objects>
             <point key="canvasLocation" x="75" y="750"/>
         </scene>
-        <!--View Controller-->
+        <!--Records View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController title="Records" id="5gI-5U-AMq" customClass="RecordsViewController" sceneMemberID="viewController">
+                <viewController title="Records" id="5gI-5U-AMq" userLabel="Records View Controller" customClass="RecordsViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="ERx-hH-rdd">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -692,10 +692,10 @@ CA
             </objects>
             <point key="canvasLocation" x="-179" y="1416"/>
         </scene>
-        <!--View Controller-->
+        <!--Overview View Controller-->
         <scene sceneID="XFw-Kn-euc">
             <objects>
-                <viewController title="Overview" id="Jop-Dh-IBt" customClass="OverviewViewController" sceneMemberID="viewController">
+                <viewController title="Overview" id="Jop-Dh-IBt" userLabel="Overview View Controller" customClass="OverviewViewController" sceneMemberID="viewController">
                     <view key="view" id="VP1-h2-Kmu">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="538"/>
                         <autoresizingMask key="autoresizingMask"/>
