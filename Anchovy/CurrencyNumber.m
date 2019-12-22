@@ -56,4 +56,11 @@
     self.cents += rhs.cents;
 }
 
+-(NSComparisonResult)compare:(CurrencyNumber *)other
+{
+    if (self.cents < other.cents) return NSOrderedAscending;
+    if (self.cents > other.cents) return NSOrderedDescending;
+    return NSOrderedSame;
+}
+
 @end

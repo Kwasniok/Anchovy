@@ -19,4 +19,5 @@
 - (float)floatValue;
 - (void)add:(CurrencyNumber*)rhs;
 - (void)subtract:(CurrencyNumber*)rhs;
+- (NSComparisonResult)compare:(CurrencyNumber*) other;
 @end
