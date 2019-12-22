@@ -62,4 +62,10 @@
 {
     [_recordController removeObjects: _recordController.selectedObjects];
 }
+
+- (IBAction)resetRecordFilter:(id)sender
+{
+    self.recordFilterPredicate = [NSPredicate predicateWithFormat:@"date < %@", [NSDate dateWithTimeIntervalSinceNow:0.0]];
+}
+
 @end

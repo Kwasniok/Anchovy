@@ -14,12 +14,13 @@
     NSRect _windowFrameToRestore;
 }
 @property (strong) IBOutlet NSArrayController *recordController;
-@property NSPredicate* recordControllerFilterPrdicate;
 @property (strong) IBOutlet NSDateFormatter *dateFormatter;
 @property (strong) IBOutlet NSNumberFormatter *amountFormatter;
+@property NSPredicate* recordFilterPredicate;
 
 - (IBAction)addRecord:(id)sender;
 - (IBAction)removeRecord:(id)sender;
+- (IBAction)resetRecordFilter:(id)sender;
 
 @end
 
