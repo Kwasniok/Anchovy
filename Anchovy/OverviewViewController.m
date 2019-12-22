@@ -23,13 +23,29 @@ void updateTotals(Record* record, float* total, float* positiveTotal, float* neg
     // fits to smallest size compatible with constrains (of dummy element)
     [super viewWillAppear];
     self.preferredContentSize = self.view.fittingSize;
-    // initialize
-    _tagSeparator = @",";
+}
+
+-(void)viewDidAppear
+{
+    [super viewDidAppear];
+    if (_windowFrameToRestore.size.width != 0.0 && _windowFrameToRestore.size.height != 0.0)
+    {
+        [self.view.window setFrame: _windowFrameToRestore display:YES animate:YES];
+    }
+}
+
+-(void)viewWillDisappear
+{
+    _windowFrameToRestore = self.view.window.frame;
+    [super viewWillDisappear];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // initialize
+    _tagSeparator = @",";
+    _windowFrameToRestore = NSMakeRect(0.0, 0.0, 0.0, 0.0);
 }
 
 - (void)setRepresentedObject:(id)representedObject

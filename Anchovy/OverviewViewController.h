@@ -10,6 +10,9 @@
 #include "Content.h"
 
 @interface OverviewViewController : NSViewController
+{
+    NSRect _windowFrameToRestore;
+}
 
 @property NSString* tagSeparator;
 @property (weak) IBOutlet NSTextField *outputPositiveTotal;

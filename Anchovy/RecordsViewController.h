@@ -10,7 +10,9 @@
 #import "Content.h"
 
 @interface RecordsViewController : NSViewController
-
+{
+    NSRect _windowFrameToRestore;
+}
 @property (strong) IBOutlet NSArrayController *recordController;
 @property (strong) IBOutlet NSDateFormatter *dateFormatter;
 @property (strong) IBOutlet NSNumberFormatter *amountFormatter;

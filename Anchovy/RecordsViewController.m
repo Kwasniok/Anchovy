@@ -10,19 +10,27 @@
 
 @implementation RecordsViewController
 
-- (void)viewDidLoad {
+-(void)viewDidAppear
+{
+    [super viewDidAppear];
+    if (_windowFrameToRestore.size.width != 0.0 && _windowFrameToRestore.size.height != 0.0)
+    {
+        [self.view.window setFrame: _windowFrameToRestore display:YES animate:YES];
+    }
+}
+
+-(void)viewWillDisappear
+{
+    _windowFrameToRestore = self.view.window.frame;
+    [super viewWillDisappear];
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-
-    // Do any additional setup after loading the view.
+    // initialize
+    _windowFrameToRestore = NSMakeRect(0.0, 0.0, 0.0, 0.0);
 }
-
-
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
-}
-
 
 -(BOOL)acceptsFirstResponder
 {
