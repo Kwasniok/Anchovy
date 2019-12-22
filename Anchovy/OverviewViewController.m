@@ -32,6 +32,9 @@ void updateTotals(Record* record, CurrencyNumber* total, CurrencyNumber* positiv
     {
         [self.view.window setFrame: _windowFrameToRestore display:YES animate:YES];
     }
+    // update totals
+    [self updateTotals];
+    [self updateFilteredTotals];
 }
 
 -(void)viewWillDisappear
@@ -51,11 +54,6 @@ void updateTotals(Record* record, CurrencyNumber* total, CurrencyNumber* positiv
 - (void)setRepresentedObject:(id)representedObject
 {
     [super setRepresentedObject:representedObject];
-}
-
-- (IBAction)update:(id)sender
-{
-    [self updateTotals];
 }
 
 - (IBAction)tagFilterAction:(id)sender

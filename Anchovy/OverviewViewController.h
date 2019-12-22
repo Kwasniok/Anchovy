@@ -34,7 +34,6 @@
 @property (weak) IBOutlet NSTextField *outputFilteredLastMonthPositiveTotal;
 @property (weak) IBOutlet NSTextField *outputFilteredLastMonthNegativeTotal;
 @property (weak) IBOutlet NSTextField *outputFilteredLastMonthTotal;
-- (IBAction)update:(id)sender;
 - (IBAction)tagFilterAction:(id)sender;
 - (void)updateTotals;
 - (void)updateFilteredTotals;
