@@ -612,6 +612,7 @@ CA
                                                                     </tokenFieldCell>
                                                                     <connections>
                                                                         <binding destination="3Uf-qJ-BSF" name="value" keyPath="objectValue.tags" id="T98-G4-9e0"/>
+                                                                        <outlet property="delegate" destination="KoV-WW-S7j" id="qBp-Vm-5mt"/>
                                                                     </connections>
                                                                 </tokenField>
                                                             </subviews>
@@ -680,6 +681,11 @@ CA
                 </arrayController>
                 <dateFormatter dateStyle="short" id="Iwg-LR-8mB"/>
                 <numberFormatter formatterBehavior="default10_4" numberStyle="currency" lenient="YES" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" minimumFractionDigits="2" maximumFractionDigits="2" id="F37-RD-Dum" userLabel="Amount Formatter"/>
+                <customObject id="KoV-WW-S7j" customClass="TagsTokenFieldDelegate">
+                    <connections>
+                        <outlet property="viewController" destination="5gI-5U-AMq" id="J4R-ee-OxT"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-179" y="1416"/>
         </scene>

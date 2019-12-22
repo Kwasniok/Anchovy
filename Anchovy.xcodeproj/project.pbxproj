@@ -17,6 +17,7 @@
 		B4519F3A23AD5683008A4440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4519F3823AD5683008A4440 /* Main.storyboard */; };
 		B49AFA7423AE903B00DE84B9 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = B49AFA7323AE903B00DE84B9 /* Content.m */; };
 		B49AFA7723AE92C100DE84B9 /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = B49AFA7623AE92C100DE84B9 /* Record.m */; };
+		B4E6EA8723AF355D008671AC /* TagsTokenFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E6EA8623AF355D008671AC /* TagsTokenFieldDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		B49AFA7323AE903B00DE84B9 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
 		B49AFA7523AE92C100DE84B9 /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
 		B49AFA7623AE92C100DE84B9 /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
+		B4E6EA8523AF355D008671AC /* TagsTokenFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsTokenFieldDelegate.h; sourceTree = "<group>"; };
+		B4E6EA8623AF355D008671AC /* TagsTokenFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsTokenFieldDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				B445CE4E23AEE2FB00D70AB3 /* MainViewController.m */,
 				B4519F3023AD5683008A4440 /* RecordsViewController.h */,
 				B4519F3123AD5683008A4440 /* RecordsViewController.m */,
+				B4E6EA8523AF355D008671AC /* TagsTokenFieldDelegate.h */,
+				B4E6EA8623AF355D008671AC /* TagsTokenFieldDelegate.m */,
 				B445CE4A23AEDF3D00D70AB3 /* OverviewViewController.h */,
 				B445CE4B23AEDF3D00D70AB3 /* OverviewViewController.m */,
 				B4519F3323AD5683008A4440 /* Document.h */,
@@ -172,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4519F3523AD5683008A4440 /* Document.m in Sources */,
+				B4E6EA8723AF355D008671AC /* TagsTokenFieldDelegate.m in Sources */,
 				B445CE4C23AEDF3D00D70AB3 /* OverviewViewController.m in Sources */,
 				B4519F3223AD5683008A4440 /* RecordsViewController.m in Sources */,
 				B445CE4F23AEE2FB00D70AB3 /* MainViewController.m in Sources */,
