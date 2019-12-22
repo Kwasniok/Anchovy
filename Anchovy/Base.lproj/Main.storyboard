@@ -1100,7 +1100,8 @@ CA
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </tokenFieldCell>
                                             <connections>
-                                                <outlet property="delegate" destination="TJt-6S-Lra" id="32V-3F-j1Z"/>
+                                                <action selector="tagFilterAction:" target="Jop-Dh-IBt" id="hNJ-J5-Bg4"/>
+                                                <outlet property="delegate" destination="TJt-6S-Lra" id="7BN-Q7-Byj"/>
                                             </connections>
                                         </tokenField>
                                     </subviews>

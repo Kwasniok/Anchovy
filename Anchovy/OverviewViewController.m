@@ -55,6 +55,16 @@ void updateTotals(Record* record, CurrencyNumber* total, CurrencyNumber* positiv
 
 - (IBAction)update:(id)sender
 {
+    [self updateTotals];
+}
+
+- (IBAction)tagFilterAction:(id)sender
+{
+    [self updateFilteredTotals];
+}
+
+- (void)updateTotals
+{
     Content* content = self.representedObject;
     CurrencyNumber* total= [[CurrencyNumber alloc] initWithCents:0];
     CurrencyNumber* positiveTotal= [[CurrencyNumber alloc] initWithCents:0];
@@ -65,16 +75,6 @@ void updateTotals(Record* record, CurrencyNumber* total, CurrencyNumber* positiv
     CurrencyNumber* lastMonthTotal= [[CurrencyNumber alloc] initWithCents:0];
     CurrencyNumber* lastMonthPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
     CurrencyNumber* lastMonthNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
-    NSArray<NSString*>* filterTags = [_inputTagFilter.stringValue componentsSeparatedByString:_tagSeparator];
-    CurrencyNumber* filteredTotal= [[CurrencyNumber alloc] initWithCents:0];
-    CurrencyNumber* filteredPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
-    CurrencyNumber* filteredNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
-    CurrencyNumber* filteredThisMonthTotal= [[CurrencyNumber alloc] initWithCents:0];
-    CurrencyNumber* filteredThisMonthPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
-    CurrencyNumber* filteredThisMonthNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
-    CurrencyNumber* filteredLastMonthTotal= [[CurrencyNumber alloc] initWithCents:0];
-    CurrencyNumber* filteredLastMonthPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
-    CurrencyNumber* filteredLastMonthNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
     NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate* now = [[NSDate alloc] initWithTimeIntervalSinceNow:0.0];
     NSDateComponents* thisMonthComponents = [calendar components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth) fromDate:now];
@@ -106,31 +106,6 @@ void updateTotals(Record* record, CurrencyNumber* total, CurrencyNumber* positiv
                                  lastMonthNegativeTotal);
                 }
             }
-            if (isFilteredByTags(record, filterTags))
-            {
-                updateTotals(record,
-                             filteredTotal,
-                             filteredPositiveTotal,
-                             filteredNegativeTotal);
-                if (record.date)
-                {
-                    NSDateComponents* dateComponents = [calendar components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth) fromDate:record.date];
-                    if ([dateComponents isEqualTo:thisMonthComponents])
-                    {
-                        updateTotals(record,
-                                     filteredThisMonthTotal,
-                                     filteredThisMonthPositiveTotal,
-                                     filteredThisMonthNegativeTotal);
-                    }
-                    if ([dateComponents isEqualTo:lastMonthComponents])
-                    {
-                        updateTotals(record,
-                                     filteredLastMonthTotal,
-                                     filteredLastMonthPositiveTotal,
-                                     filteredLastMonthNegativeTotal);
-                    }
-                }
-            }
         }
     }
     _outputPositiveTotal.floatValue = positiveTotal.floatValue;
@@ -142,7 +117,54 @@ void updateTotals(Record* record, CurrencyNumber* total, CurrencyNumber* positiv
     _outputLastMonthPositiveTotal.floatValue = lastMonthPositiveTotal.floatValue;
     _outputLastMonthNegativeTotal.floatValue = lastMonthNegativeTotal.floatValue;
     _outputLastMonthTotal.floatValue = lastMonthTotal.floatValue;
-    // filtered
+}
+
+- (void)updateFilteredTotals
+{
+    Content* content = self.representedObject;
+    NSArray<NSString*>* filterTags = [_inputTagFilter.stringValue componentsSeparatedByString:_tagSeparator];
+    CurrencyNumber* filteredTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredThisMonthTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredThisMonthPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredThisMonthNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredLastMonthTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredLastMonthPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredLastMonthNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
+    NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDate* now = [[NSDate alloc] initWithTimeIntervalSinceNow:0.0];
+    NSDateComponents* thisMonthComponents = [calendar components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth) fromDate:now];
+    NSDate* oneMonthAgo = [calendar dateByAddingUnit:NSCalendarUnitMonth value:-1 toDate:now options:0];
+    NSDateComponents* lastMonthComponents = [calendar components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth) fromDate:oneMonthAgo];
+    for (Record* record in content.records)
+    {
+        if (record.amount && isFilteredByTags(record, filterTags))
+        {
+            updateTotals(record,
+                         filteredTotal,
+                         filteredPositiveTotal,
+                         filteredNegativeTotal);
+            if (record.date)
+            {
+                NSDateComponents* dateComponents = [calendar components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth) fromDate:record.date];
+                if ([dateComponents isEqualTo:thisMonthComponents])
+                {
+                    updateTotals(record,
+                                 filteredThisMonthTotal,
+                                 filteredThisMonthPositiveTotal,
+                                 filteredThisMonthNegativeTotal);
+                }
+                if ([dateComponents isEqualTo:lastMonthComponents])
+                {
+                    updateTotals(record,
+                                 filteredLastMonthTotal,
+                                 filteredLastMonthPositiveTotal,
+                                 filteredLastMonthNegativeTotal);
+                }
+            }
+        }
+    }
     _outputFilteredPositiveTotal.floatValue = filteredPositiveTotal.floatValue;
     _outputFilteredNegativeTotal.floatValue = filteredNegativeTotal.floatValue;
     _outputFilteredTotal.floatValue = filteredTotal.floatValue;
