@@ -697,29 +697,6 @@ CA
                         <rect key="frame" x="0.0" y="0.0" width="480" height="538"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Dsn-kF-yK3" userLabel="Filter Box">
-                                <rect key="frame" x="265" y="20" width="195" height="498"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="t1q-yI-7rL">
-                                    <rect key="frame" x="1" y="1" width="193" height="496"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <tokenField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-SD-k2q">
-                                            <rect key="frame" x="20" y="465" width="153" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <tokenFieldCell key="cell" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Filter Tags" drawsBackground="YES" allowsEditingTextAttributes="YES" id="XMg-gR-Dbo">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </tokenFieldCell>
-                                            <connections>
-                                                <outlet property="delegate" destination="TJt-6S-Lra" id="32V-3F-j1Z"/>
-                                            </connections>
-                                        </tokenField>
-                                    </subviews>
-                                </view>
-                                <color key="borderColor" name="gridColor" catalog="System" colorSpace="catalog"/>
-                            </box>
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="KWB-TM-2Qv" userLabel="All TIme">
                                 <rect key="frame" x="20" y="340" width="440" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -727,6 +704,15 @@ CA
                                     <rect key="frame" x="1" y="1" width="438" height="138"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
+                                        <box fixedFrame="YES" boxType="custom" borderType="none" cornerRadius="1" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="0Vm-h8-sUn" userLabel="Visual Guide Box">
+                                            <rect key="frame" x="0.0" y="42" width="438" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" ambiguous="YES" id="VmR-Po-K4Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="438" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <color key="fillColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                        </box>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DXi-X0-3j6">
                                             <rect key="frame" x="18" y="99" width="63" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -837,7 +823,7 @@ CA
                                         </textField>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <color key="borderColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                             </box>
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="owo-EZ-LJO" userLabel="This Month">
                                 <rect key="frame" x="20" y="180" width="440" height="140"/>
@@ -846,6 +832,15 @@ CA
                                     <rect key="frame" x="1" y="1" width="438" height="138"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
+                                        <box fixedFrame="YES" boxType="custom" borderType="none" cornerRadius="1" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Mch-1T-NjQ" userLabel="Visual Guide Box">
+                                            <rect key="frame" x="0.0" y="42" width="438" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" ambiguous="YES" id="YKt-qU-uaI">
+                                                <rect key="frame" x="0.0" y="0.0" width="438" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <color key="fillColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                        </box>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gzz-JU-qCO">
                                             <rect key="frame" x="18" y="99" width="87" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -956,7 +951,7 @@ CA
                                         </textField>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <color key="borderColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                             </box>
                             <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="NRZ-mJ-k7o" userLabel="Last Month">
                                 <rect key="frame" x="20" y="20" width="440" height="140"/>
@@ -965,6 +960,15 @@ CA
                                     <rect key="frame" x="1" y="1" width="438" height="138"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
+                                        <box fixedFrame="YES" boxType="custom" borderType="none" cornerRadius="1" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="rKV-eV-kbN" userLabel="Visual Guide Box">
+                                            <rect key="frame" x="0.0" y="42" width="438" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" ambiguous="YES" id="Y0l-St-jzd">
+                                                <rect key="frame" x="0.0" y="0.0" width="438" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <color key="fillColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                        </box>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jDD-fP-1JG">
                                             <rect key="frame" x="18" y="99" width="87" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1075,7 +1079,30 @@ CA
                                         </textField>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <color key="borderColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                            </box>
+                            <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Dsn-kF-yK3" userLabel="Filter Box">
+                                <rect key="frame" x="265" y="20" width="195" height="498"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" ambiguous="YES" id="t1q-yI-7rL">
+                                    <rect key="frame" x="1" y="1" width="193" height="496"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tokenField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-SD-k2q">
+                                            <rect key="frame" x="20" y="465" width="153" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <tokenFieldCell key="cell" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="Filter Tags" drawsBackground="YES" allowsEditingTextAttributes="YES" id="XMg-gR-Dbo">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </tokenFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="TJt-6S-Lra" id="32V-3F-j1Z"/>
+                                            </connections>
+                                        </tokenField>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                             </box>
                             <button hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFW-sC-kf3">
                                 <rect key="frame" x="-2" y="-2" width="22" height="22"/>
@@ -1085,7 +1112,7 @@ CA
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6C-9r-ZAA">
-                                <rect key="frame" x="74" y="489" width="125" height="32"/>
+                                <rect key="frame" x="79" y="486" width="125" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Update Totals" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vDQ-hR-K5Z">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
