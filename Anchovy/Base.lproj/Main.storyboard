@@ -776,6 +776,47 @@ Record</string>
                                                                     </menu>
                                                                 </popUpMenus>
                                                             </predicateEditorRowTemplate>
+                                                            <predicateEditorRowTemplate rowType="simple" id="VcI-qL-x5S">
+                                                                <array key="leftExpressionObject">
+                                                                    <expression type="keyPath">
+                                                                        <string key="keyPath">amount.cents</string>
+                                                                    </expression>
+                                                                </array>
+                                                                <integer key="rightExpressionObject" value="300"/>
+                                                                <popUpMenus>
+                                                                    <menu id="Z01-gc-XYf">
+                                                                        <items>
+                                                                            <menuItem title="amount.cents" state="on" id="dRe-rn-KXf">
+                                                                                <expression key="representedObject" type="keyPath">
+                                                                                    <string key="keyPath">amount.cents</string>
+                                                                                </expression>
+                                                                            </menuItem>
+                                                                        </items>
+                                                                    </menu>
+                                                                    <menu id="kin-ws-7N4">
+                                                                        <items>
+                                                                            <menuItem title="is" state="on" id="IN2-8a-zg3">
+                                                                                <integer key="representedObject" value="4"/>
+                                                                            </menuItem>
+                                                                            <menuItem title="is not" id="gK2-Zp-i02">
+                                                                                <integer key="representedObject" value="5"/>
+                                                                            </menuItem>
+                                                                            <menuItem title="is greater than or equal to" id="hmT-rU-LBd">
+                                                                                <integer key="representedObject" value="3"/>
+                                                                            </menuItem>
+                                                                            <menuItem title="is less than or equal to" id="ZhI-Fx-nXd">
+                                                                                <integer key="representedObject" value="1"/>
+                                                                            </menuItem>
+                                                                            <menuItem title="is less than" id="OsD-FF-ZKs">
+                                                                                <integer key="representedObject" value="0"/>
+                                                                            </menuItem>
+                                                                            <menuItem title="is greater than" id="E3N-f8-9yz">
+                                                                                <integer key="representedObject" value="2"/>
+                                                                            </menuItem>
+                                                                        </items>
+                                                                    </menu>
+                                                                </popUpMenus>
+                                                            </predicateEditorRowTemplate>
                                                         </rowTemplates>
                                                         <connections>
                                                             <binding destination="5gI-5U-AMq" name="value" keyPath="recordFilterPredicate" id="QqB-HR-nqL"/>
