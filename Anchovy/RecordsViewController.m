@@ -53,7 +53,9 @@
     record.date = [[NSDate alloc] initWithTimeIntervalSinceNow:0.0];
     record.amount = [[CurrencyNumber alloc] initWithCents:0];
     //[_recordController addObject:record];
-    [_recordController insertObject:record atArrangedObjectIndex:[_recordController selectionIndex] + 1];
+    NSInteger index = [_recordController selectionIndex] + 1;
+    if (index < 0) index = 0;
+    [_recordController insertObject:record atArrangedObjectIndex:index];
 }
 
 - (IBAction)removeRecord:(id)sender
