@@ -9,7 +9,11 @@
 #import "OverviewViewController.h"
 
 BOOL isFilteredByTags(Record* record, NSArray* filterTags);
-void updateTotals(Record* record, float* total, float* positiveTotal, float* negativeTotal);
+void updateTotals(Record* record, NSInteger* total, NSInteger* positiveTotal, NSInteger* negativeTotal);
+NSInteger nearestInt(float f)
+{
+    return ((NSInteger)(f * 2.0) /2);
+}
 
 @interface OverviewViewController ()
 
@@ -56,25 +60,25 @@ void updateTotals(Record* record, float* total, float* positiveTotal, float* neg
 - (IBAction)update:(id)sender
 {
     Content* content = self.representedObject;
-    float total = 0.0;
-    float positiveTotal = 0.0;
-    float negativeTotal = 0.0;
-    float thisMonthTotal = 0.0;
-    float thisMonthPositiveTotal = 0.0;
-    float thisMonthNegativeTotal = 0.0;
-    float lastMonthTotal = 0.0;
-    float lastMonthPositiveTotal = 0.0;
-    float lastMonthNegativeTotal = 0.0;
+    NSInteger total = 0.0;
+    NSInteger positiveTotal = 0.0;
+    NSInteger negativeTotal = 0.0;
+    NSInteger thisMonthTotal = 0.0;
+    NSInteger thisMonthPositiveTotal = 0.0;
+    NSInteger thisMonthNegativeTotal = 0.0;
+    NSInteger lastMonthTotal = 0.0;
+    NSInteger lastMonthPositiveTotal = 0.0;
+    NSInteger lastMonthNegativeTotal = 0.0;
     NSArray<NSString*>* filterTags = [_inputTagFilter.stringValue componentsSeparatedByString:_tagSeparator];
-    float filteredTotal = 0.0;
-    float filteredPositiveTotal = 0.0;
-    float filteredNegativeTotal = 0.0;
-    float filteredThisMonthTotal = 0.0;
-    float filteredThisMonthPositiveTotal = 0.0;
-    float filteredThisMonthNegativeTotal = 0.0;
-    float filteredLastMonthTotal = 0.0;
-    float filteredLastMonthPositiveTotal = 0.0;
-    float filteredLastMonthNegativeTotal = 0.0;
+    NSInteger filteredTotal = 0.0;
+    NSInteger filteredPositiveTotal = 0.0;
+    NSInteger filteredNegativeTotal = 0.0;
+    NSInteger filteredThisMonthTotal = 0.0;
+    NSInteger filteredThisMonthPositiveTotal = 0.0;
+    NSInteger filteredThisMonthNegativeTotal = 0.0;
+    NSInteger filteredLastMonthTotal = 0.0;
+    NSInteger filteredLastMonthPositiveTotal = 0.0;
+    NSInteger filteredLastMonthNegativeTotal = 0.0;
     NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate* now = [[NSDate alloc] initWithTimeIntervalSinceNow:0.0];
     NSDateComponents* thisMonthComponents = [calendar components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth) fromDate:now];
@@ -133,25 +137,25 @@ void updateTotals(Record* record, float* total, float* positiveTotal, float* neg
             }
         }
     }
-    _outputPositiveTotal.floatValue = positiveTotal;
-    _outputNegativeTotal.floatValue = negativeTotal;
-    _outputTotal.floatValue = total;
-    _outputThisMonthPositiveTotal.floatValue = thisMonthPositiveTotal;
-    _outputThisMonthNegativeTotal.floatValue = thisMonthNegativeTotal;
-    _outputThisMonthTotal.floatValue = thisMonthTotal;
-    _outputLastMonthPositiveTotal.floatValue = lastMonthPositiveTotal;
-    _outputLastMonthNegativeTotal.floatValue = lastMonthNegativeTotal;
-    _outputLastMonthTotal.floatValue = lastMonthTotal;
+    _outputPositiveTotal.floatValue = positiveTotal / 100.0;
+    _outputNegativeTotal.floatValue = negativeTotal / 100.0;
+    _outputTotal.floatValue = total / 100.0;
+    _outputThisMonthPositiveTotal.floatValue = thisMonthPositiveTotal / 100.0;
+    _outputThisMonthNegativeTotal.floatValue = thisMonthNegativeTotal / 100.0;
+    _outputThisMonthTotal.floatValue = thisMonthTotal / 100.0;
+    _outputLastMonthPositiveTotal.floatValue = lastMonthPositiveTotal / 100.0;
+    _outputLastMonthNegativeTotal.floatValue = lastMonthNegativeTotal / 100.0;
+    _outputLastMonthTotal.floatValue = lastMonthTotal / 100.0;
     // filtered
-    _outputFilteredPositiveTotal.floatValue = filteredPositiveTotal;
-    _outputFilteredNegativeTotal.floatValue = filteredNegativeTotal;
-    _outputFilteredTotal.floatValue = filteredTotal;
-    _outputFilteredThisMonthPositiveTotal.floatValue = filteredThisMonthPositiveTotal;
-    _outputFilteredThisMonthNegativeTotal.floatValue = filteredThisMonthNegativeTotal;
-    _outputFilteredThisMonthTotal.floatValue = filteredThisMonthTotal;
-    _outputFilteredLastMonthPositiveTotal.floatValue = filteredLastMonthPositiveTotal;
-    _outputFilteredLastMonthNegativeTotal.floatValue = filteredLastMonthNegativeTotal;
-    _outputFilteredLastMonthTotal.floatValue = filteredLastMonthTotal;
+    _outputFilteredPositiveTotal.floatValue = filteredPositiveTotal / 100.0;
+    _outputFilteredNegativeTotal.floatValue = filteredNegativeTotal / 100.0;
+    _outputFilteredTotal.floatValue = filteredTotal / 100.0;
+    _outputFilteredThisMonthPositiveTotal.floatValue = filteredThisMonthPositiveTotal / 100.0;
+    _outputFilteredThisMonthNegativeTotal.floatValue = filteredThisMonthNegativeTotal / 100.0;
+    _outputFilteredThisMonthTotal.floatValue = filteredThisMonthTotal / 100.0;
+    _outputFilteredLastMonthPositiveTotal.floatValue = filteredLastMonthPositiveTotal / 100.0;
+    _outputFilteredLastMonthNegativeTotal.floatValue = filteredLastMonthNegativeTotal / 100.0;
+    _outputFilteredLastMonthTotal.floatValue = filteredLastMonthTotal / 100.0;
 }
 @end
 
@@ -169,10 +173,10 @@ BOOL isFilteredByTags(Record* record, NSArray* filterTags)
     return isFiltered;
 }
 
-void updateTotals(Record* record, float* total, float* positiveTotal, float* negativeTotal)
+void updateTotals(Record* record, NSInteger* total, NSInteger* positiveTotal, NSInteger* negativeTotal)
 {
     if (!record.amount) return;
-    float amount = record.amount.floatValue;
+    NSInteger amount = nearestInt(record.amount.floatValue * 1000.0)/10;
     if (amount > 0.0)
     {
         *positiveTotal += amount;
