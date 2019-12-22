@@ -14,6 +14,12 @@
 @property (weak) IBOutlet NSTextField *outputPositiveTotal;
 @property (weak) IBOutlet NSTextField *outputNegativeTotal;
 @property (weak) IBOutlet NSTextField *outputTotal;
+@property (weak) IBOutlet NSTextField *outputThisMonthPositiveTotal;
+@property (weak) IBOutlet NSTextField *outputThisMonthNegativeTotal;
+@property (weak) IBOutlet NSTextField *outputThisMonthTotal;
+@property (weak) IBOutlet NSTextField *outputLastMonthPositiveTotal;
+@property (weak) IBOutlet NSTextField *outputLastMonthNegativeTotal;
+@property (weak) IBOutlet NSTextField *outputLastMonthTotal;
 - (IBAction)update:(id)sender;
 
 @end
