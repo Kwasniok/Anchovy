@@ -51,7 +51,7 @@
 {
     Record* record = [[Record alloc] init];
     record.date = [[NSDate alloc] initWithTimeIntervalSinceNow:0.0];
-    record.amount = [[NSNumber alloc] initWithFloat:0.0];
+    record.amount = [[CurrencyNumber alloc] initWithCents:0];
     [_recordController addObject:record];
 }
 
