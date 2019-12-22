@@ -9,11 +9,7 @@
 #import "OverviewViewController.h"
 
 BOOL isFilteredByTags(Record* record, NSArray* filterTags);
-void updateTotals(Record* record, NSInteger* total, NSInteger* positiveTotal, NSInteger* negativeTotal);
-NSInteger nearestInt(float f)
-{
-    return ((NSInteger)(f * 2.0) /2);
-}
+void updateTotals(Record* record, CurrencyNumber* total, CurrencyNumber* positiveTotal, CurrencyNumber* negativeTotal);
 
 @interface OverviewViewController ()
 
@@ -60,25 +56,25 @@ NSInteger nearestInt(float f)
 - (IBAction)update:(id)sender
 {
     Content* content = self.representedObject;
-    NSInteger total = 0.0;
-    NSInteger positiveTotal = 0.0;
-    NSInteger negativeTotal = 0.0;
-    NSInteger thisMonthTotal = 0.0;
-    NSInteger thisMonthPositiveTotal = 0.0;
-    NSInteger thisMonthNegativeTotal = 0.0;
-    NSInteger lastMonthTotal = 0.0;
-    NSInteger lastMonthPositiveTotal = 0.0;
-    NSInteger lastMonthNegativeTotal = 0.0;
+    CurrencyNumber* total= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* positiveTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* negativeTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* thisMonthTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* thisMonthPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* thisMonthNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* lastMonthTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* lastMonthPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* lastMonthNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
     NSArray<NSString*>* filterTags = [_inputTagFilter.stringValue componentsSeparatedByString:_tagSeparator];
-    NSInteger filteredTotal = 0.0;
-    NSInteger filteredPositiveTotal = 0.0;
-    NSInteger filteredNegativeTotal = 0.0;
-    NSInteger filteredThisMonthTotal = 0.0;
-    NSInteger filteredThisMonthPositiveTotal = 0.0;
-    NSInteger filteredThisMonthNegativeTotal = 0.0;
-    NSInteger filteredLastMonthTotal = 0.0;
-    NSInteger filteredLastMonthPositiveTotal = 0.0;
-    NSInteger filteredLastMonthNegativeTotal = 0.0;
+    CurrencyNumber* filteredTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredThisMonthTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredThisMonthPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredThisMonthNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredLastMonthTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredLastMonthPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
+    CurrencyNumber* filteredLastMonthNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
     NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate* now = [[NSDate alloc] initWithTimeIntervalSinceNow:0.0];
     NSDateComponents* thisMonthComponents = [calendar components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth) fromDate:now];
@@ -89,73 +85,73 @@ NSInteger nearestInt(float f)
         if (record.amount)
         {
             updateTotals(record,
-                         &total,
-                         &positiveTotal,
-                         &negativeTotal);
+                         total,
+                         positiveTotal,
+                         negativeTotal);
             if (record.date)
             {
                 NSDateComponents* dateComponents = [calendar components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth) fromDate:record.date];
                 if ([dateComponents isEqualTo:thisMonthComponents])
                 {
                     updateTotals(record,
-                                 &thisMonthTotal,
-                                 &thisMonthPositiveTotal,
-                                 &thisMonthNegativeTotal);
+                                 thisMonthTotal,
+                                 thisMonthPositiveTotal,
+                                 thisMonthNegativeTotal);
                 }
                 if ([dateComponents isEqualTo:lastMonthComponents])
                 {
                     updateTotals(record,
-                                 &lastMonthTotal,
-                                 &lastMonthPositiveTotal,
-                                 &lastMonthNegativeTotal);
+                                 lastMonthTotal,
+                                 lastMonthPositiveTotal,
+                                 lastMonthNegativeTotal);
                 }
             }
             if (isFilteredByTags(record, filterTags))
             {
                 updateTotals(record,
-                             &filteredTotal,
-                             &filteredPositiveTotal,
-                             &filteredNegativeTotal);
+                             filteredTotal,
+                             filteredPositiveTotal,
+                             filteredNegativeTotal);
                 if (record.date)
                 {
                     NSDateComponents* dateComponents = [calendar components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth) fromDate:record.date];
                     if ([dateComponents isEqualTo:thisMonthComponents])
                     {
                         updateTotals(record,
-                                     &filteredThisMonthTotal,
-                                     &filteredThisMonthPositiveTotal,
-                                     &filteredThisMonthNegativeTotal);
+                                     filteredThisMonthTotal,
+                                     filteredThisMonthPositiveTotal,
+                                     filteredThisMonthNegativeTotal);
                     }
                     if ([dateComponents isEqualTo:lastMonthComponents])
                     {
                         updateTotals(record,
-                                     &filteredLastMonthTotal,
-                                     &filteredLastMonthPositiveTotal,
-                                     &filteredLastMonthNegativeTotal);
+                                     filteredLastMonthTotal,
+                                     filteredLastMonthPositiveTotal,
+                                     filteredLastMonthNegativeTotal);
                     }
                 }
             }
         }
     }
-    _outputPositiveTotal.floatValue = positiveTotal / 100.0;
-    _outputNegativeTotal.floatValue = negativeTotal / 100.0;
-    _outputTotal.floatValue = total / 100.0;
-    _outputThisMonthPositiveTotal.floatValue = thisMonthPositiveTotal / 100.0;
-    _outputThisMonthNegativeTotal.floatValue = thisMonthNegativeTotal / 100.0;
-    _outputThisMonthTotal.floatValue = thisMonthTotal / 100.0;
-    _outputLastMonthPositiveTotal.floatValue = lastMonthPositiveTotal / 100.0;
-    _outputLastMonthNegativeTotal.floatValue = lastMonthNegativeTotal / 100.0;
-    _outputLastMonthTotal.floatValue = lastMonthTotal / 100.0;
+    _outputPositiveTotal.floatValue = positiveTotal.floatValue;
+    _outputNegativeTotal.floatValue = negativeTotal.floatValue;
+    _outputTotal.floatValue = total.floatValue;
+    _outputThisMonthPositiveTotal.floatValue = thisMonthPositiveTotal.floatValue;
+    _outputThisMonthNegativeTotal.floatValue = thisMonthNegativeTotal.floatValue;
+    _outputThisMonthTotal.floatValue = thisMonthTotal.floatValue;
+    _outputLastMonthPositiveTotal.floatValue = lastMonthPositiveTotal.floatValue;
+    _outputLastMonthNegativeTotal.floatValue = lastMonthNegativeTotal.floatValue;
+    _outputLastMonthTotal.floatValue = lastMonthTotal.floatValue;
     // filtered
-    _outputFilteredPositiveTotal.floatValue = filteredPositiveTotal / 100.0;
-    _outputFilteredNegativeTotal.floatValue = filteredNegativeTotal / 100.0;
-    _outputFilteredTotal.floatValue = filteredTotal / 100.0;
-    _outputFilteredThisMonthPositiveTotal.floatValue = filteredThisMonthPositiveTotal / 100.0;
-    _outputFilteredThisMonthNegativeTotal.floatValue = filteredThisMonthNegativeTotal / 100.0;
-    _outputFilteredThisMonthTotal.floatValue = filteredThisMonthTotal / 100.0;
-    _outputFilteredLastMonthPositiveTotal.floatValue = filteredLastMonthPositiveTotal / 100.0;
-    _outputFilteredLastMonthNegativeTotal.floatValue = filteredLastMonthNegativeTotal / 100.0;
-    _outputFilteredLastMonthTotal.floatValue = filteredLastMonthTotal / 100.0;
+    _outputFilteredPositiveTotal.floatValue = filteredPositiveTotal.floatValue;
+    _outputFilteredNegativeTotal.floatValue = filteredNegativeTotal.floatValue;
+    _outputFilteredTotal.floatValue = filteredTotal.floatValue;
+    _outputFilteredThisMonthPositiveTotal.floatValue = filteredThisMonthPositiveTotal.floatValue;
+    _outputFilteredThisMonthNegativeTotal.floatValue = filteredThisMonthNegativeTotal.floatValue;
+    _outputFilteredThisMonthTotal.floatValue = filteredThisMonthTotal.floatValue;
+    _outputFilteredLastMonthPositiveTotal.floatValue = filteredLastMonthPositiveTotal.floatValue;
+    _outputFilteredLastMonthNegativeTotal.floatValue = filteredLastMonthNegativeTotal.floatValue;
+    _outputFilteredLastMonthTotal.floatValue = filteredLastMonthTotal.floatValue;
 }
 @end
 
@@ -173,17 +169,17 @@ BOOL isFilteredByTags(Record* record, NSArray* filterTags)
     return isFiltered;
 }
 
-void updateTotals(Record* record, NSInteger* total, NSInteger* positiveTotal, NSInteger* negativeTotal)
+void updateTotals(Record* record, CurrencyNumber* total, CurrencyNumber* positiveTotal, CurrencyNumber* negativeTotal)
 {
     if (!record.amount) return;
-    NSInteger amount = nearestInt(record.amount.floatValue * 1000.0)/10;
-    if (amount > 0.0)
+    CurrencyNumber* amount = record.amount;
+    if (amount.cents > 0.0)
     {
-        *positiveTotal += amount;
+        [positiveTotal add: amount];
     }
-    if (amount < 0.0)
+    if (amount.cents < 0.0)
     {
-        *negativeTotal += amount;
+        [negativeTotal subtract: amount];
     }
-    *total += amount;
+    [total add: amount];
 }

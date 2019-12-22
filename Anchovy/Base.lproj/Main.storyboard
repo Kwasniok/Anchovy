@@ -565,9 +565,10 @@ CA
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="SJT-w3-nuK" name="value" keyPath="objectValue.amount" id="ijd-2E-IgX">
+                                                                        <binding destination="SJT-w3-nuK" name="value" keyPath="objectValue.amount" id="kVn-Ny-6QH">
                                                                             <dictionary key="options">
                                                                                 <bool key="NSConditionallySetsEditable" value="YES"/>
+                                                                                <string key="NSValueTransformerName">CurrencyNumberNSNumberTransformer</string>
                                                                             </dictionary>
                                                                         </binding>
                                                                         <outlet property="formatter" destination="F37-RD-Dum" id="WHF-d3-fcb"/>

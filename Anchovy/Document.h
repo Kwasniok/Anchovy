@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Content.h"
+#import "CurrencyNumberNSNumberTransformer.h"
 
 // Note: IO formatters are intentionally differnt from the UI formatters!
 

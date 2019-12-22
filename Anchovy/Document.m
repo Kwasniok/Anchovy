@@ -58,6 +58,7 @@
     // Each field `x` is formatted via `xFormatter`if nedded. Empty fields (nl) result in empty entries ("").
     
     NSMutableString* dataStr = [[NSMutableString alloc] init];
+    CurrencyNumberNSNumberTransformer* amountTransformer = [[CurrencyNumberNSNumberTransformer alloc] init];
     for (Record* record in _content.records)
     {
         // Buffer record string.
@@ -70,7 +71,7 @@
         }
         [recordStr appendString: fieldStr];
         [recordStr appendString: _fieldSeparator];
-        fieldStr = [_amountFormatter stringFromNumber:record.amount];
+        fieldStr = [_amountFormatter stringFromNumber:[amountTransformer transformedValue:record.amount]];
         if (!fieldStr)
         {
             fieldStr = @"";
@@ -124,7 +125,8 @@
         NSArray<NSString*>* fieldStrs = [recordStr componentsSeparatedByString:_fieldSeparator];
         int processed_fields = 0;
         NSDate* date = nil;
-        NSNumber* amount = nil;
+        CurrencyNumberNSNumberTransformer* amountTransformer = [[CurrencyNumberNSNumberTransformer alloc] init];
+        CurrencyNumber* amount = nil;
         NSArray<NSString*>* tags = nil;
         for (NSString* fieldStr in fieldStrs)
         {
@@ -139,7 +141,7 @@
             }
             if (processed_fields == 1)
             {
-                amount = [_amountFormatter numberFromString:fieldStr];
+                amount = [amountTransformer reverseTransformedValue:[_amountFormatter numberFromString:fieldStr]];
                 if (amount == nil)
                 {
                     //NSLog(@"failed to read amount");

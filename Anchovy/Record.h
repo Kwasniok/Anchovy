@@ -6,12 +6,13 @@
 //  Copyright © 2019 Jens Kwasniok. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
+#import "CurrencyNumber.h"
 
 @interface Record : NSObject
 
 @property NSDate* date;
-@property NSNumber* amount;
+@property CurrencyNumber* amount;
 @property NSArray<NSString*>* tags;
 
 @end
