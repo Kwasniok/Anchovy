@@ -19,6 +19,8 @@
 		B49AFA7723AE92C100DE84B9 /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = B49AFA7623AE92C100DE84B9 /* Record.m */; };
 		B4E6EA8723AF355D008671AC /* TagsTokenFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E6EA8623AF355D008671AC /* TagsTokenFieldDelegate.m */; };
 		B4E6EA8A23AF3CDB008671AC /* TagsTokenFilterDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E6EA8923AF3CDB008671AC /* TagsTokenFilterDelegate.m */; };
+		B4E6EA9323AF86A9008671AC /* CurrencyNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E6EA9223AF86A9008671AC /* CurrencyNumber.m */; };
+		B4E6EA9623AF883F008671AC /* CurrencyNumberNSNumberTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E6EA9523AF883F008671AC /* CurrencyNumberNSNumberTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,10 @@
 		B4E6EA8623AF355D008671AC /* TagsTokenFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsTokenFieldDelegate.m; sourceTree = "<group>"; };
 		B4E6EA8823AF3CDB008671AC /* TagsTokenFilterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsTokenFilterDelegate.h; sourceTree = "<group>"; };
 		B4E6EA8923AF3CDB008671AC /* TagsTokenFilterDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsTokenFilterDelegate.m; sourceTree = "<group>"; };
+		B4E6EA9123AF86A9008671AC /* CurrencyNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyNumber.h; sourceTree = "<group>"; };
+		B4E6EA9223AF86A9008671AC /* CurrencyNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyNumber.m; sourceTree = "<group>"; };
+		B4E6EA9423AF883F008671AC /* CurrencyNumberNSNumberTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyNumberNSNumberTransformer.h; sourceTree = "<group>"; };
+		B4E6EA9523AF883F008671AC /* CurrencyNumberNSNumberTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyNumberNSNumberTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,10 @@
 				B49AFA7323AE903B00DE84B9 /* Content.m */,
 				B49AFA7523AE92C100DE84B9 /* Record.h */,
 				B49AFA7623AE92C100DE84B9 /* Record.m */,
+				B4E6EA9123AF86A9008671AC /* CurrencyNumber.h */,
+				B4E6EA9223AF86A9008671AC /* CurrencyNumber.m */,
+				B4E6EA9423AF883F008671AC /* CurrencyNumberNSNumberTransformer.h */,
+				B4E6EA9523AF883F008671AC /* CurrencyNumberNSNumberTransformer.m */,
 				B4519F3623AD5683008A4440 /* Assets.xcassets */,
 				B4519F3823AD5683008A4440 /* Main.storyboard */,
 				B4519F3B23AD5683008A4440 /* Info.plist */,
@@ -181,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E6EA9323AF86A9008671AC /* CurrencyNumber.m in Sources */,
 				B4519F3523AD5683008A4440 /* Document.m in Sources */,
 				B4E6EA8723AF355D008671AC /* TagsTokenFieldDelegate.m in Sources */,
 				B445CE4C23AEDF3D00D70AB3 /* OverviewViewController.m in Sources */,
@@ -191,6 +202,7 @@
 				B49AFA7723AE92C100DE84B9 /* Record.m in Sources */,
 				B4519F2C23AD5683008A4440 /* AppDelegate.m in Sources */,
 				B4E6EA8A23AF3CDB008671AC /* TagsTokenFilterDelegate.m in Sources */,
+				B4E6EA9623AF883F008671AC /* CurrencyNumberNSNumberTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
