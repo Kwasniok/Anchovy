@@ -14,6 +14,7 @@
     NSRect _windowFrameToRestore;
 }
 @property (strong) IBOutlet NSArrayController *recordController;
+@property NSPredicate* recordControllerFilterPrdicate;
 @property (strong) IBOutlet NSDateFormatter *dateFormatter;
 @property (strong) IBOutlet NSNumberFormatter *amountFormatter;
 
