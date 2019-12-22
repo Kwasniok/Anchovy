@@ -606,8 +606,8 @@ CA
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <tokenField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6UT-29-lZj">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="263" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="265" height="17"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <tokenFieldCell key="cell" selectable="YES" editable="YES" alignment="left" placeholderString="Tags" allowsEditingTextAttributes="YES" id="Ev3-cW-gcB">
                                                                         <font key="font" metaFont="cellTitle"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
