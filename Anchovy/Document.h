@@ -7,9 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Content.h"
+#import "CurrencyNumberNSNumberTransformer.h"
+
+// Note: IO formatters are intentionally differnt from the UI formatters!
 
 @interface Document : NSDocument
 
+@property Content* content;
+@property NSString* recordSeparator;
+@property NSString* fieldSeparator;
+@property NSString* tagSeparator;
+@property NSDateFormatter* dateFormatter;
+@property NSNumberFormatter* amountFormatter;
 
 @end
 

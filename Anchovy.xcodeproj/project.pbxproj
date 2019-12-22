@@ -7,26 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B445CE4C23AEDF3D00D70AB3 /* OverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B445CE4B23AEDF3D00D70AB3 /* OverviewViewController.m */; };
+		B445CE4F23AEE2FB00D70AB3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B445CE4E23AEE2FB00D70AB3 /* MainViewController.m */; };
 		B4519F2C23AD5683008A4440 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4519F2B23AD5683008A4440 /* AppDelegate.m */; };
 		B4519F2F23AD5683008A4440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4519F2E23AD5683008A4440 /* main.m */; };
-		B4519F3223AD5683008A4440 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4519F3123AD5683008A4440 /* ViewController.m */; };
+		B4519F3223AD5683008A4440 /* RecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4519F3123AD5683008A4440 /* RecordsViewController.m */; };
 		B4519F3523AD5683008A4440 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = B4519F3423AD5683008A4440 /* Document.m */; };
 		B4519F3723AD5683008A4440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4519F3623AD5683008A4440 /* Assets.xcassets */; };
 		B4519F3A23AD5683008A4440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4519F3823AD5683008A4440 /* Main.storyboard */; };
+		B49AFA7423AE903B00DE84B9 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = B49AFA7323AE903B00DE84B9 /* Content.m */; };
+		B49AFA7723AE92C100DE84B9 /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = B49AFA7623AE92C100DE84B9 /* Record.m */; };
+		B4E6EA8723AF355D008671AC /* TagsTokenFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E6EA8623AF355D008671AC /* TagsTokenFieldDelegate.m */; };
+		B4E6EA8A23AF3CDB008671AC /* TagsTokenFilterDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E6EA8923AF3CDB008671AC /* TagsTokenFilterDelegate.m */; };
+		B4E6EA9323AF86A9008671AC /* CurrencyNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E6EA9223AF86A9008671AC /* CurrencyNumber.m */; };
+		B4E6EA9623AF883F008671AC /* CurrencyNumberNSNumberTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E6EA9523AF883F008671AC /* CurrencyNumberNSNumberTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B445CE4A23AEDF3D00D70AB3 /* OverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewViewController.h; sourceTree = "<group>"; };
+		B445CE4B23AEDF3D00D70AB3 /* OverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewViewController.m; sourceTree = "<group>"; };
+		B445CE4D23AEE2FB00D70AB3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B445CE4E23AEE2FB00D70AB3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B4519F2723AD5683008A4440 /* Anchovy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anchovy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4519F2A23AD5683008A4440 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4519F2B23AD5683008A4440 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B4519F2E23AD5683008A4440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B4519F3023AD5683008A4440 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B4519F3123AD5683008A4440 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B4519F3023AD5683008A4440 /* RecordsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordsViewController.h; sourceTree = "<group>"; };
+		B4519F3123AD5683008A4440 /* RecordsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordsViewController.m; sourceTree = "<group>"; };
 		B4519F3323AD5683008A4440 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
 		B4519F3423AD5683008A4440 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		B4519F3623AD5683008A4440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4519F3923AD5683008A4440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4519F3B23AD5683008A4440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49AFA7223AE903B00DE84B9 /* Content.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
+		B49AFA7323AE903B00DE84B9 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
+		B49AFA7523AE92C100DE84B9 /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
+		B49AFA7623AE92C100DE84B9 /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
+		B4E6EA8523AF355D008671AC /* TagsTokenFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsTokenFieldDelegate.h; sourceTree = "<group>"; };
+		B4E6EA8623AF355D008671AC /* TagsTokenFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsTokenFieldDelegate.m; sourceTree = "<group>"; };
+		B4E6EA8823AF3CDB008671AC /* TagsTokenFilterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsTokenFilterDelegate.h; sourceTree = "<group>"; };
+		B4E6EA8923AF3CDB008671AC /* TagsTokenFilterDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsTokenFilterDelegate.m; sourceTree = "<group>"; };
+		B4E6EA9123AF86A9008671AC /* CurrencyNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyNumber.h; sourceTree = "<group>"; };
+		B4E6EA9223AF86A9008671AC /* CurrencyNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyNumber.m; sourceTree = "<group>"; };
+		B4E6EA9423AF883F008671AC /* CurrencyNumberNSNumberTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyNumberNSNumberTransformer.h; sourceTree = "<group>"; };
+		B4E6EA9523AF883F008671AC /* CurrencyNumberNSNumberTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyNumberNSNumberTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +85,26 @@
 			children = (
 				B4519F2A23AD5683008A4440 /* AppDelegate.h */,
 				B4519F2B23AD5683008A4440 /* AppDelegate.m */,
-				B4519F3023AD5683008A4440 /* ViewController.h */,
-				B4519F3123AD5683008A4440 /* ViewController.m */,
+				B445CE4D23AEE2FB00D70AB3 /* MainViewController.h */,
+				B445CE4E23AEE2FB00D70AB3 /* MainViewController.m */,
+				B4519F3023AD5683008A4440 /* RecordsViewController.h */,
+				B4519F3123AD5683008A4440 /* RecordsViewController.m */,
+				B4E6EA8523AF355D008671AC /* TagsTokenFieldDelegate.h */,
+				B4E6EA8623AF355D008671AC /* TagsTokenFieldDelegate.m */,
+				B4E6EA8823AF3CDB008671AC /* TagsTokenFilterDelegate.h */,
+				B4E6EA8923AF3CDB008671AC /* TagsTokenFilterDelegate.m */,
+				B445CE4A23AEDF3D00D70AB3 /* OverviewViewController.h */,
+				B445CE4B23AEDF3D00D70AB3 /* OverviewViewController.m */,
 				B4519F3323AD5683008A4440 /* Document.h */,
 				B4519F3423AD5683008A4440 /* Document.m */,
+				B49AFA7223AE903B00DE84B9 /* Content.h */,
+				B49AFA7323AE903B00DE84B9 /* Content.m */,
+				B49AFA7523AE92C100DE84B9 /* Record.h */,
+				B49AFA7623AE92C100DE84B9 /* Record.m */,
+				B4E6EA9123AF86A9008671AC /* CurrencyNumber.h */,
+				B4E6EA9223AF86A9008671AC /* CurrencyNumber.m */,
+				B4E6EA9423AF883F008671AC /* CurrencyNumberNSNumberTransformer.h */,
+				B4E6EA9523AF883F008671AC /* CurrencyNumberNSNumberTransformer.m */,
 				B4519F3623AD5683008A4440 /* Assets.xcassets */,
 				B4519F3823AD5683008A4440 /* Main.storyboard */,
 				B4519F3B23AD5683008A4440 /* Info.plist */,
@@ -151,10 +191,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E6EA9323AF86A9008671AC /* CurrencyNumber.m in Sources */,
 				B4519F3523AD5683008A4440 /* Document.m in Sources */,
-				B4519F3223AD5683008A4440 /* ViewController.m in Sources */,
+				B4E6EA8723AF355D008671AC /* TagsTokenFieldDelegate.m in Sources */,
+				B445CE4C23AEDF3D00D70AB3 /* OverviewViewController.m in Sources */,
+				B4519F3223AD5683008A4440 /* RecordsViewController.m in Sources */,
+				B445CE4F23AEE2FB00D70AB3 /* MainViewController.m in Sources */,
 				B4519F2F23AD5683008A4440 /* main.m in Sources */,
+				B49AFA7423AE903B00DE84B9 /* Content.m in Sources */,
+				B49AFA7723AE92C100DE84B9 /* Record.m in Sources */,
 				B4519F2C23AD5683008A4440 /* AppDelegate.m in Sources */,
+				B4E6EA8A23AF3CDB008671AC /* TagsTokenFilterDelegate.m in Sources */,
+				B4E6EA9623AF883F008671AC /* CurrencyNumberNSNumberTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +350,7 @@
 				B4519F4023AD5683008A4440 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
