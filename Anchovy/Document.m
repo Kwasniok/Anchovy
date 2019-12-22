@@ -22,6 +22,7 @@
         _content = [[Content alloc] init];
         _recordSeparator = @"\n";
         _fieldSeparator = @";";
+        _tagSeparator = @","; // Must match separator of corresponding NSTokenField in UI!
         _dateFormatter = [[NSDateFormatter alloc] init];
         [_dateFormatter setDateFormat:@"YYYY.MM.dd.HH.mm.ss"];
         _amountFormatter = [[NSNumberFormatter alloc] init];
@@ -74,6 +75,14 @@
         }
         [recordStr appendString: fieldStr];
         [recordStr appendString: _fieldSeparator];
+        if (!record.tags)
+        {
+            fieldStr = @"";
+        } else {
+            fieldStr = [record.tags componentsJoinedByString:_tagSeparator];
+        }
+        [recordStr appendString: fieldStr];
+        [recordStr appendString: _fieldSeparator];
         [recordStr appendString: _recordSeparator];
         // Append record.
         [dataStr appendString:recordStr];
@@ -114,6 +123,7 @@
         int processed_fields = 0;
         NSDate* date = nil;
         NSNumber* amount = nil;
+        NSArray<NSString*>* tags = nil;
         for (NSString* fieldStr in fieldStrs)
         {
             //NSLog(@"field %i: %@", processed_fields + 1, fieldStr);
@@ -135,6 +145,19 @@
             }
             if (processed_fields == 2)
             {
+                tags = [fieldStr componentsSeparatedByString:_tagSeparator];
+                // filter non-empty tags
+                NSPredicate* predicateNonEmptyString = [NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+                    return ![@"" isEqualToString:evaluatedObject];
+                }];
+                tags = [tags filteredArrayUsingPredicate:predicateNonEmptyString];
+                if (tags == nil)
+                {
+                    //NSLog(@"failed to read tags");
+                }
+            }
+            if (processed_fields == 3)
+            {
                 if (![fieldStr isEqualToString:@""])
                 {
                     //NSLog(@"Record %i has more fields than expected.", processed_records + 1);
@@ -143,7 +166,7 @@
             }
             ++processed_fields;
         }
-        // Skip records with all fields empty.
+        // Skip records with empty date and empty tag field.
         if (!date && !amount)
         {
             continue;
@@ -151,6 +174,7 @@
         Record* record = [[Record alloc] init];
         record.date = date;
         record.amount = amount;
+        record.tags = tags;
         [_content.records addObject:record];
         ++processed_records;
     }

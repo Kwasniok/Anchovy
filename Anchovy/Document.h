@@ -16,6 +16,7 @@
 @property Content* content;
 @property NSString* recordSeparator;
 @property NSString* fieldSeparator;
+@property NSString* tagSeparator;
 @property NSDateFormatter* dateFormatter;
 @property NSNumberFormatter* amountFormatter;
 

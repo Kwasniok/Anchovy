@@ -12,7 +12,6 @@
 
 @property NSDate* date;
 @property NSNumber* amount;
-
--(instancetype)initWithDate:(NSDate*) date amount:(NSNumber*) amount;
+@property NSArray<NSString*>* tags;
 
 @end
