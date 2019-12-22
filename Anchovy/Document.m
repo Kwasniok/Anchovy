@@ -23,9 +23,12 @@
         _recordSeparator = @"\n";
         _fieldSeparator = @";";
         _tagSeparator = @","; // Must match separator of corresponding NSTokenField in UI!
+        // Date format for .anc files is yyyy.MM.dd.HH.mm.ss in UTC.
         _dateFormatter = [[NSDateFormatter alloc] init];
-        [_dateFormatter setDateFormat:@"YYYY.MM.dd.HH.mm.ss"];
+        [_dateFormatter setDateFormat:@"yyyy.MM.dd.HH.mm.ss"];
         [_dateFormatter setLenient:YES];
+        [_dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+        [_dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
         _amountFormatter = [[NSNumberFormatter alloc] init];
         _amountFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
         [_amountFormatter setLenient:YES];
