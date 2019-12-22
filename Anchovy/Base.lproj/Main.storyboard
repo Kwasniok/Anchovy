@@ -647,7 +647,7 @@ CA
         <scene sceneID="XFw-Kn-euc">
             <objects>
                 <viewController title="Overview" id="Jop-Dh-IBt" customClass="OverviewViewController" sceneMemberID="viewController">
-                    <view key="view" id="VP1-h2-Kmu">
+                    <view key="view" misplaced="YES" id="VP1-h2-Kmu">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="541"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -911,7 +911,20 @@ CA
                                 </view>
                                 <color key="borderColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                             </box>
+                            <button hidden="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFW-sC-kf3">
+                                <rect key="frame" x="-2" y="-2" width="16" height="16"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" enabled="NO" state="on" inset="2" id="KTX-t5-nBW">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="YFW-sC-kf3" firstAttribute="leading" secondItem="VP1-h2-Kmu" secondAttribute="leading" id="9xq-h0-98Q"/>
+                            <constraint firstItem="YFW-sC-kf3" firstAttribute="top" secondItem="VP1-h2-Kmu" secondAttribute="top" constant="529" id="WWO-Oj-4k4"/>
+                            <constraint firstAttribute="bottom" secondItem="YFW-sC-kf3" secondAttribute="bottom" id="fFo-ia-QCD"/>
+                            <constraint firstAttribute="trailing" secondItem="YFW-sC-kf3" secondAttribute="trailing" constant="468" id="lVl-Km-1YZ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="outputLastMonthNegativeTotal" destination="hIM-Hl-Yya" id="0Zs-yp-x0z"/>

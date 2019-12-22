@@ -14,6 +14,14 @@
 
 @implementation OverviewViewController
 
+-(void)viewWillAppear
+{
+    // needed for auto resize (e.g. in tab view)
+    // fits to smallest size compatible with constrains (of dummy element)
+    [super viewWillAppear];
+    self.preferredContentSize = self.view.fittingSize;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
