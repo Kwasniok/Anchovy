@@ -121,6 +121,11 @@ void updateTotals(Record* record, CurrencyNumber* total, CurrencyNumber* positiv
 {
     Content* content = self.representedObject;
     NSArray<NSString*>* filterTags = [_inputTagFilter.stringValue componentsSeparatedByString:_tagSeparator];
+    if (filterTags.count == 0)
+    {
+        // No matches possible without tags.
+        return;
+    }
     CurrencyNumber* filteredTotal= [[CurrencyNumber alloc] initWithCents:0];
     CurrencyNumber* filteredPositiveTotal= [[CurrencyNumber alloc] initWithCents:0];
     CurrencyNumber* filteredNegativeTotal= [[CurrencyNumber alloc] initWithCents:0];
