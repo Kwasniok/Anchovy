@@ -15,6 +15,7 @@
 		B4519F3523AD5683008A4440 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = B4519F3423AD5683008A4440 /* Document.m */; };
 		B4519F3723AD5683008A4440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4519F3623AD5683008A4440 /* Assets.xcassets */; };
 		B4519F3A23AD5683008A4440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4519F3823AD5683008A4440 /* Main.storyboard */; };
+		B48B8DE523D778FD00E4DAA5 /* anc_to_xlsx.py in Resources */ = {isa = PBXBuildFile; fileRef = B48B8DE423D778FD00E4DAA5 /* anc_to_xlsx.py */; };
 		B49AFA7423AE903B00DE84B9 /* Content.m in Sources */ = {isa = PBXBuildFile; fileRef = B49AFA7323AE903B00DE84B9 /* Content.m */; };
 		B49AFA7723AE92C100DE84B9 /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = B49AFA7623AE92C100DE84B9 /* Record.m */; };
 		B4E6EA8723AF355D008671AC /* TagsTokenFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E6EA8623AF355D008671AC /* TagsTokenFieldDelegate.m */; };
@@ -39,6 +40,7 @@
 		B4519F3623AD5683008A4440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4519F3923AD5683008A4440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4519F3B23AD5683008A4440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B48B8DE423D778FD00E4DAA5 /* anc_to_xlsx.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = anc_to_xlsx.py; sourceTree = "<group>"; };
 		B49AFA7223AE903B00DE84B9 /* Content.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Content.h; sourceTree = "<group>"; };
 		B49AFA7323AE903B00DE84B9 /* Content.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Content.m; sourceTree = "<group>"; };
 		B49AFA7523AE92C100DE84B9 /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		B4519F1E23AD5682008A4440 = {
 			isa = PBXGroup;
 			children = (
+				B48B8DE423D778FD00E4DAA5 /* anc_to_xlsx.py */,
 				B4519F2923AD5683008A4440 /* Anchovy */,
 				B4519F2823AD5683008A4440 /* Products */,
 			);
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4519F3723AD5683008A4440 /* Assets.xcassets in Resources */,
+				B48B8DE523D778FD00E4DAA5 /* anc_to_xlsx.py in Resources */,
 				B4519F3A23AD5683008A4440 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
